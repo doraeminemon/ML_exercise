@@ -16,10 +16,8 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
-    if iter > 1
-      feat = sum(X .* ((X * theta) - y))
-      theta = theta - (alpha * feat' / m)
-    endif
+    feat = sum(X .* ((X * theta) - y))
+    theta = theta - (alpha * feat' / m)
 
 
 
