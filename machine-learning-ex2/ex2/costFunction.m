@@ -19,9 +19,9 @@ grad = zeros(size(theta));
 %
 % Note: grad should have the same dimensions as theta
 %
-
-
-
+h0 = 1 ./ (1 + e.^-(X * theta))
+J = sum(-y .* log(h0) - (1 - y) .* log(1 - h0)) / m
+grad = (X' * (h0 - y)) /m
 
 
 

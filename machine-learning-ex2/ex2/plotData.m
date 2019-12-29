@@ -13,9 +13,8 @@ figure; hold on;
 %
 
 
-
-
-
+plot(X(:, 2), X(:, 1) .* y, "r+", "MarkerSize", 10)
+plot(X(:, 2), X(:, 1) .* ((y - 1) * -1), "ro", "MarkerSize", 10)
 
 
 

@@ -18,6 +18,9 @@
 
 %% Initialization
 clear ; close all; clc
+function pause
+  input('','s');
+end
 
 %% Load Data
 %  The first two columns contains the exam scores and the third column

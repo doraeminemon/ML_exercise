@@ -19,6 +19,10 @@
 
 %% Initialization
 clear ; close all; clc
+function pause
+  input('','s');
+end
+
 
 %% Load Data
 %  The first two columns contains the X values and the third column
