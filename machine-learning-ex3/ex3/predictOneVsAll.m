@@ -29,10 +29,8 @@ X = [ones(m, 1) X];
 %       are in rows, then, you can use max(A, [], 2) to obtain the max 
 %       for each row.
 %       
-
-
-
-
+% fprintf("size %f \n", size(X * all_theta'))
+[v, p] = max(X * all_theta', [], 2)
 
 
 

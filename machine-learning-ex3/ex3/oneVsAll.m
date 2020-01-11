@@ -50,9 +50,20 @@ X = [ones(m, 1) X];
 %
 
 
+initial_theta = zeros(n + 1, 1)
+options = optimset('GradObj', 'on', 'MaxIter', 50);
+% if exist('prevResult.mat') > 0
+%   all_theta = load('prevResult.mat').('all_theta')
+%   return
+% endif
+
+for c = 1:num_labels
+  [theta] = fmincg (@(t)(lrCostFunction(t, X, (y == c), lambda)), initial_theta, options);
+  all_theta(c,:) = theta
+endfor
 
 
-
+% save -binary prevResult.mat all_theta
 
 
 

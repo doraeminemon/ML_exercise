@@ -18,6 +18,9 @@
 
 %% Initialization
 clear ; close all; clc
+function pause
+  input('','s');
+end
 
 %% Setup the parameters you will use for this part of the exercise
 input_layer_size  = 400;  % 20x20 Input Images of Digits
@@ -84,5 +87,6 @@ pause;
 
 pred = predictOneVsAll(all_theta, X);
 
+% fprintf('\nTraining Set Accuracy: %f\n', size(pred))
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
 

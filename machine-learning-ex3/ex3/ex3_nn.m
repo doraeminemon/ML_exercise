@@ -18,6 +18,9 @@
 
 %% Initialization
 clear ; close all; clc
+function pause
+  input('','s');
+end
 
 %% Setup the parameters you will use for this exercise
 input_layer_size  = 400;  % 20x20 Input Images of Digits
@@ -62,7 +65,7 @@ load('ex3weights.mat');
 
 pred = predict(Theta1, Theta2, X);
 
-fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
+% fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
