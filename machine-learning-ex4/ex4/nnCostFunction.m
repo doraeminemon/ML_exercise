@@ -81,10 +81,9 @@ cost = cost - ...
     y_expanded .* log(a3) - ...
         (1 - y_expanded) .* log(1 - a3)
 J = sum(sum(cost)) / m;
-
-
-
-
+sum1 = sum(sum((Theta2(:, 2:end) .^ 2 )))
+sum2 = sum(sum((Theta1(:, 2:end) .^ 2 )))
+J = J + ((sum1 + sum2) * (lambda / (2 * m)))
 
 
 
