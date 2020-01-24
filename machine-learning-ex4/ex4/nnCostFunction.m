@@ -62,8 +62,25 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
+X = [ones(m, 1) X];
 
+% % mutliply to get output activations and linear combination z's
+a2 = sigmoid(X * Theta1');
+a2 = [ones(m, 1) a2];
+a3 = sigmoid(a2 * Theta2');
 
+% % expand the y vector into a binary vector with 
+% % only a single 1 set
+y_expanded = zeros(m, num_labels);
+for i = 1 : m
+    y_expanded(i, y(i)) = 1;
+end
+
+cost = 0;
+cost = cost - ...
+    y_expanded .* log(a3) - ...
+        (1 - y_expanded) .* log(1 - a3)
+J = sum(sum(cost)) / m;
 
 
 

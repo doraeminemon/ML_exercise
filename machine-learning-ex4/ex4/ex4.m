@@ -17,6 +17,9 @@
 
 %% Initialization
 clear ; close all; clc
+function pause
+  input('','s');
+end
 
 %% Setup the parameters you will use for this exercise
 input_layer_size  = 400;  % 20x20 Input Images of Digits
