@@ -85,11 +85,11 @@ sum1 = sum(sum((Theta2(:, 2:end) .^ 2 )))
 sum2 = sum(sum((Theta1(:, 2:end) .^ 2 )))
 J = J + ((sum1 + sum2) * (lambda / (2 * m)))
 
+delta_3 = a3 - y_expanded
+delta_2 = (delta_3 * Theta2)(:, 1:end - 1) .* sigmoidGradient(a2)(:, 1:end - 1)
 
-
-
-
-
+Theta1_grad = delta_2' * X / m
+Theta2_grad = delta_3' * a2 / m
 
 
 
