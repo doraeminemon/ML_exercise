@@ -89,8 +89,9 @@ delta_3 = a3 - y_expanded
 delta_2 = (delta_3 * Theta2)(:, 2:end) .* sigmoidGradient(X * Theta1')
 
 Theta1_grad = delta_2' * X / m
+Theta1_grad = Theta1_grad + (lambda * Theta1' / m)'
 Theta2_grad = delta_3' * a2 / m
-
+Theta2_grad = Theta2_grad + (lambda * Theta2' / m)'
 
 
 
