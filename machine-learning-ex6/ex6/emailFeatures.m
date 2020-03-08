@@ -48,8 +48,11 @@ x = zeros(n, 1);
 %
 %
 
-
-
+uniq_indices = unique(word_indices)
+m = size(uniq_indices, 1)
+for i = 1:m
+  x(uniq_indices(i)) = 1
+end
 
 
 

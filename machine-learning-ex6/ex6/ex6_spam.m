@@ -80,7 +80,7 @@ p = svmPredict(model, X);
 
 fprintf('Training Accuracy: %f\n', mean(double(p == y)) * 100);
 
-%% =================== Part 4: Test Spam Classification ================
+% =================== Part 4: Test Spam Classification ================
 %  After training the classifier, we can evaluate it on a test set. We have
 %  included a test set in spamTest.mat
 
