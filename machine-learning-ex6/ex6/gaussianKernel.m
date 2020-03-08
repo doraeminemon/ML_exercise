@@ -16,8 +16,8 @@ sim = 0;
 %
 %
 
-
-
+total = sum( (x1 - x2) .^ 2)
+sim = exp(-total / (2*(sigma ^ 2)))
 
 
 
