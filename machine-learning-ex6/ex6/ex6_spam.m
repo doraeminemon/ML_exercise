@@ -18,6 +18,9 @@
 
 %% Initialization
 clear ; close all; clc
+function pause
+  input('','s');
+end
 
 %% ==================== Part 1: Email Preprocessing ====================
 %  To use an SVM to classify emails into Spam v.s. Non-Spam, you first need
