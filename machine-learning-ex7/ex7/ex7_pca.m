@@ -20,6 +20,9 @@
 
 %% Initialization
 clear ; close all; clc
+function pause
+  input('','s');
+end
 
 %% ================== Part 1: Load Example Dataset  ===================
 %  We start this exercise by using a small dataset that is easily to
