@@ -21,7 +21,19 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
-
+sizeX = size(X, 1)
+for i = 1:sizeX
+  selected = 1
+  minDist = 9999
+  for j = 1:K
+    distanceToCentroid = sum(abs(X(i, :) - centroids(j, :)) .^ 2)
+    if distanceToCentroid < minDist
+      selected = j
+      minDist = distanceToCentroid
+    end
+  end
+  idx(i) = selected
+end
 
 
 
