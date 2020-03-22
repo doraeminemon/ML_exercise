@@ -22,10 +22,11 @@ sigma2 = zeros(n, 1);
 %
 
 
-
-
-
-
+for i = 1:n
+  mui = mean(X'(i, :))
+  mu(i) = mui
+  sigma2(i) = sum((X'(i, :) - mui) .^ 2 )/ m
+end
 
 
 
