@@ -20,6 +20,9 @@
 %  structure of the data.
 %  
 fprintf('Loading movie ratings dataset.\n\n');
+function pause
+  input('','s');
+end
 
 %  Load data
 load ('ex8_movies.mat');
